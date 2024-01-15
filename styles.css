@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: rgb(254, 218, 69);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line on smaller screens */
+}
+
+.left-column, .right-column {
+    flex: 1;
+    align-self: flex-start; /* Align columns to the start (top) of the container */
+    width: 100%; /* Full width for smaller screens */
+}
+
+.timeline img, .img1 img, .para2 img, .para3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adding rounded corners for aesthetic */
+    margin: 10px;
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 600px) {
+    .left-column, .right-column {
+        flex: 100%; /* Full width for smaller screens */
+    }
+
+    .timeline, .img1, .para2 {
+        width: 100%;
+    }
+
+    .para3, .para4 {
+        max-width: 100%; /* Make para3 and para4 full width on mobile */
+    }
+
+    .para1 img {
+        height: 300px; /* Decrease height for smaller screens */
+        width: auto; /* Ensure auto width to maintain aspect ratio */
+    }
+
+}
